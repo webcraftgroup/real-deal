@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Comfort Tee | Real Deal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe"
+      crossorigin="anonymous">
+
+<!-- Google Fonts: Poetsen One and Outfit -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poetsen+One&display=swap"
+      rel="stylesheet">
+
+<!-- Real Deal custom CSS -->
+<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+
+   
+<header>
+
+<nav class="navbar md:navbar-expand" aria-label="Main navigation">
+    <div class="container">    
+        <a class="navbar-brand" href="index.html">
+             <img src="images/real-deal-logo.png"
+            alt="Real Deal logo"
+            class="brand-logo">
+        </a>
+
+
+        <button class="btn-icon navbar-toggler" type="button"
+                data-bs-toggle="drawer" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+
+        <dialog class="drawer drawer-end" tabindex="-1"
+                id="mainNav" aria-labelledby="mainNavLabel">
+
+            <div class="drawer-header">
+                <h2 class="drawer-title" id="mainNavLabel">Menu</h2>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="drawer"
+                        aria-label="Close navigation"></button>
+            </div>
+
+            <div class="drawer-body">
+                <ul class="nav navbar-nav md:ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#shop">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </dialog>
+    </div>
+</nav>
+
+</header>
+
+
+<main>
+    <section class="product-hero">
+        <div class="container">
+            <div class="row align-items-center">
+
+               
+                <div class="md:col-6">
+                    <img src="images/everyday-comfort.png"
+                        alt="White Everyday Comfort T-shirt featuring a colorful retro teddy bear design"
+                        class="img-fluid product-image">
+                </div>
+
+
+                <div class="md:col-6">
+                    <p class="product-tagline">
+                        REAL DEAL ORIGINAL <span class="tag-star">✦</span>
+                    </p>
+                    <h1>Everyday <span class="d-block">Comfort Tee</span></h1>
+                    <p class="product-price">₱499</p>
+                    <p>
+                        The Everyday Comfort Tee is a mini reminder
+                        to slow down and take a break every now and then.
+                        With its cute teddy bear centerpiece, it's all
+                        about finding comfort in the little things
+                        and appreciating the good moments in everyday life.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Product Details and Order Section -->
+<section class="product-details">
+    <div class="container">
+        <div class="row">
+
+            <div class="md:col-6">        
+                <h2 class="details-heading">
+                    The Details
+                    <span class="details-spark" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </h2>
+
+
+                <p>
+                    The Everyday Comfort Tee includes a laid-back
+                    silhouette with a classic crew neckline and a
+                    retro teddy bear print, ideal for a casual yet
+                    put-together ensemble.
+                </p>
+
+                <hr>
+
+                <dl>
+                    <div class="d-flex justify-content-between">
+                        <dt>Material</dt>
+                        <dd>100% cotton</dd>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <dt>Fit</dt>
+                        <dd>Relaxed unisex</dd>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <dt>Care</dt>
+                        <dd>Cold wash</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="md:col-6">
+                
+            <div class="order-panel">
+                <h2>Choose a size</h2>
+
+                <fieldset class="size-selector">
+                    <legend class="visually-hidden">
+                        Select your T-shirt size
+                    </legend>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <input type="radio" class="btn-check"
+                            name="shirt-size" id="size-xs" value="XS">
+                        <label class="btn btn-outline-primary" for="size-xs">XS</label>
+
+                        <input type="radio" class="btn-check"
+                            name="shirt-size" id="size-s" value="S">
+                        <label class="btn btn-outline-primary" for="size-s">S</label>
+
+                        <input type="radio" class="btn-check"
+                            name="shirt-size" id="size-m" value="M" checked>
+                        <label class="btn btn-outline-primary" for="size-m">M</label>
+
+                        <input type="radio" class="btn-check"
+                            name="shirt-size" id="size-l" value="L">
+                        <label class="btn btn-outline-primary" for="size-l">L</label>
+
+                        <input type="radio" class="btn-check"
+                            name="shirt-size" id="size-xl" value="XL">
+                        <label class="btn btn-outline-primary" for="size-xl">XL</label>
+                    </div>
+                </fieldset>
+
+                    <!-- Quantity Selector -->
+                    <div class="quantity-section">
+                        <h3>Quantity</h3>
+
+                        <div class="quantity-control">
+                            <button type="button" id="decrease-qty"
+                                    aria-label="Decrease quantity">−</button>
+
+                            <span id="quantity-value" aria-live="polite">1</span>
+
+                            <button type="button" id="increase-qty"
+                                    aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                        <!-- Order Button -->
+                        <button type="button" id="order-now" class="order-button">
+                            ORDER NOW
+                        </button>
+
+                        <p class="shipping-note">
+                            Free local shipping on orders over ₱1,500
+                        </p>
+            </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</section>
+
+<!-- About Real Deal Section -->
+<section class="about-real-deal" id="about-real-deal" aria-labelledby="about-heading">
+    <div class="about-logo-wrap">
+        <span class="about-sparkle sparkle-blue">✦</span>
+        <span class="about-sparkle sparkle-orange">✦</span>
+        <img src="images/real-deal-logo.png"
+            alt="Real Deal colorful logo"
+            class="about-logo">
+    </div>
+
+        <h2 id="about-heading">About Real Deal</h2>
+
+        <p>
+            Through colorful graphic tees, we bring personality,
+            creativity, and a little extra brightness to everyday wear.
+            Our goal is to help everyone express themselves through
+            what they wear, one tee at a time.
+        </p>
+    </div>
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>REAL DEAL · © 2026</p>
+
+            <nav aria-label="Footer navigation">
+                <a href="privacy.html">Privacy</a>
+                <span aria-hidden="true">|</span>
+                <a href="terms.html">Terms</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- Bootstrap JavaScript -->
+<script type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+        crossorigin="anonymous"></script>
+
+<!-- Real Deal JavaScript -->
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
