@@ -5,78 +5,160 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fffdf1">
   <meta name="description" content="Colorful graphic tees from Real Deal. Wear your true colors.">
-  <title>Real Deal</title>
+  <title>Home | Real Deal</title>
+  
   <link rel="stylesheet" href="styles/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poetsen+One&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+  
 </head>
+  
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="hero" id="home">
-    <nav class="site-nav" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Real Deal home"><img src="assets/real-deal-logo.png" alt="Real Deal"></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Open menu</span></button>
-      <div class="nav-links" id="nav-links">
-        <a href="#home" aria-current="page">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-    <div class="hero-content">
-      <div class="hero-copy">
-        <span class="sunburst sunburst-yellow" aria-hidden="true">✳</span>
-        <h1>Wear Your<br><em>True Colors</em></h1>
-        <a class="button button-yellow" href="#shop">Shop Now</a>
-      </div>
-      <div class="hero-art" aria-label="Real Deal colorful graphic tees">
-        <img class="hero-shirt hero-shirt-back" src="assets/do-good-work-tee.png" alt="Do Good Work graphic tee">
-        <img class="hero-shirt hero-shirt-front" src="assets/dont-be-late-tee.png" alt="Don't Be Late graphic tee">
-        <span class="flower flower-white" aria-hidden="true">✿</span>
-        <span class="flower flower-red" aria-hidden="true">✿</span>
-      </div>
-    </div>
-  </header>
+  <div class="page-frame">
+    <header class="site-header" id="home">
+      
+      <!-- Bootstrap navbar collapses into a keyboard-friendly menu on small screens. -->
+      
+<nav class="navbar md:navbar-expand site-nav" aria-label="Main navigation">
+    <div class="container-fluid">
 
-  <main id="main">
-    <section class="products section-wrap" id="shop" aria-labelledby="products-title">
-      <h2 class="section-title" id="products-title"><span aria-hidden="true">✳</span> Products <span aria-hidden="true">✳</span></h2>
-      <div class="product-grid">
-        <article class="product-card" data-product="late">
-          <span class="accent accent-yellow" aria-hidden="true">✳</span>
-          <button class="product-image-button" type="button" aria-label="View Don't Be Late Tee details"><img src="assets/dont-be-late-tee.png" alt="Don't Be Late Tee, white graphic shirt"></button>
-          <h3>Don’t Be Late Tee</h3><p class="price">₱499</p>
-          <button class="button button-red product-open" type="button">View Product</button>
-        </article>
-        <article class="product-card" data-product="comfort">
-          <button class="product-image-button" type="button" aria-label="View Everyday Comfort Tee details"><img src="assets/everyday-comfort-tee.png" alt="Everyday Comfort Tee, white teddy bear graphic shirt"></button>
-          <h3>Everyday Comfort Tee</h3><p class="price">₱499</p>
-          <button class="button button-red product-open" type="button">View Product</button>
-        </article>
-        <article class="product-card" data-product="good-work">
-          <span class="accent accent-blue" aria-hidden="true">✳</span>
-          <button class="product-image-button" type="button" aria-label="View Do Good Work Tee details"><img src="assets/do-good-work-tee.png" alt="Do Good Work Tee, white orange graphic shirt"></button>
-          <h3>Do Good Work Tee</h3><p class="price">₱499</p>
-          <button class="button button-red product-open" type="button">View Product</button>
-        </article>
+        <!-- Brand logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="images/real-deal-logo.png"
+                 alt="Real Deal logo"
+                 class="brand-logo">
+        </a>
+
+        <!-- Mobile navigation toggle -->
+        <button class="btn-icon navbar-toggler"
+                type="button"
+                data-bs-toggle="drawer"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+
+        <!-- Responsive navigation drawer -->
+        <dialog class="drawer drawer-end"
+                tabindex="-1"
+                id="mainNav"
+                aria-labelledby="mainNavLabel">
+
+            <div class="drawer-header">
+                <h2 class="drawer-title" id="mainNavLabel">Menu</h2>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="drawer"
+                        aria-label="Close navigation">
+                </button>
+            </div>
+
+            <div class="drawer-body">
+                <ul class="navbar-nav md:ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="index.html#products">Shop</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="index.html#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </dialog>
+
+    </div>
+</nav>
+    
+      <!-- Hero Banner. -->
+      <div class="hero row align-items-center g-0">
+        <div class="lg:col-5 hero-copy">
+          <h1>Wear Your<img src="images/icons-3.png" alt="" aria-hidden="true"><br><span>True Colors</span></h1>
+          <a class="btn shop-button" href="#products">Shop Now</a>
+        </div>
+        <div class="lg:col-7 hero-art" aria-label="Featured graphic tees">
+          <img class="hero-shirt hero-shirt-one" src="images/shirt-home-header-stroke-outline.png" alt="Don't Be Late Graphic Tee">
+          <img class="hero-shirt hero-shirt-two" src="images/shirt-home-header-outline.png" alt="Do Good Work Graphic Tee">
+          <span class="hero-flower-1" aria-hidden="true">✿</span>
+          <span class="hero-flower-2" aria-hidden="true">✿</span>
+        </div>
       </div>
+    </header>
+
+    <main id="products-main">
+      <!-- Three featured products are arranged with Bootstrap's responsive columns. -->
+      <section class="products-section" id="products" aria-labelledby="products-title">
+        <h2 class="section-title" id="products-title"><img src="images/icons-5.png" alt="" aria-hidden="true"> Products <img src="images/icons-2.png" alt="" aria-hidden="true"></h2>
+        <div class="row justify-content-center g-12 product-grid">
+          <div class="col-10 sm:col-6 lg:col-3">
+            <article class="product-card" data-product="Don't Be Late Tee">
+              <a href="solo-product-dont-be-late.html" class="product-image" aria-label="Don't Be Late Tee">
+              <img class="product-image" src="images/product-dont-be-late-tee.png" alt="Don't Be Late T-shirt">
+              </a>
+              <h3>Don't Be Late Tee</h3><p class="price">₱499</p>
+              <a href="solo-product-dont-be-late.html" class="btn product-button">View Product</a>
+            </article>
+          </div>
+          <div class="col-10 sm:col-6 lg:col-3">
+            <article class="product-card" data-product="Everyday Comfort Tee">
+              <a href="solo-product-everyday-comfort.html" class="product-image" aria-label="Everyday Comfort Tee">
+              <img class="product-image" src="images/product-everyday-comfort-tee.png" alt="Everyday Comfort T-shirt">
+              </a>
+              <h3>Everyday Comfort Tee</h3><p class="price">₱499</p>
+              <a href="solo-product-everyday-comfort.html" class="btn product-button">View Product</a>
+            </article>
+          </div>
+          <div class="col-10 sm:col-6 lg:col-3">
+            <article class="product-card" data-product="Do Good Work Tee">
+              <a href="solo-product-do-good-work.html" class="product-image" aria-label="Do Good Work Tee">
+              <img class="product-image" src="images/product-do-good-work-tee.png" alt="Do Good Work T-shirt">
+              </a>
+              <h3>Do Good Work Tee</h3><p class="price">₱499</p>
+              <p></p>
+              <a href="solo-product-do-good-work.html" class="btn product-button">View Product</a>
+            </article>
+          </div>
+        </div>
+        <img class="decoration decoration-left" src="images/icons-4.png" alt="" aria-hidden="true">
+        <img class="decoration decoration-right" src="images/icons-1.png" alt="" aria-hidden="true">
     </section>
 
-    <section class="about" id="about" aria-labelledby="about-title">
-      <div class="about-content">
-        <img class="about-logo" src="assets/real-deal-logo.png" alt="Real Deal">
+       <!-- About Real Deal -->
+      <section class="about-section" id="about" aria-labelledby="about-title">
+         <a href="#home" aria-label="Real Deal">
+            <img src="images/real-deal-logo-w-outline.png" alt="Real Deal logo" class="about-logo">
+          </a>
         <h2 id="about-title">About Real Deal</h2>
         <p>Through colorful graphic tees, we bring personality, creativity, and a little extra brightness to everyday wear. Our goal is to help everyone express themselves through what they wear, one tee at a time.</p>
-      </div>
-      <footer class="site-footer" id="contact">
-        <span>REAL DEAL · © <span id="year">2026</span></span>
-        <div class="footer-links"><a href="#privacy">Privacy</a><span aria-hidden="true">|</span><a href="#terms">Terms</a></div>
-      </footer>
+    
+    <!-- Footer links -->
+    <footer class="site-footer">
+      <span>REAL DEAL · © <span id="copyright-year">2026</span></span>
+      <div class="footer-links"><a href="privacy.html" data-info="Privacy">Privacy</a><span aria-hidden="true">|</span><a href="terms.html" data-info="Terms">Terms</a></div>    
+    </footer> 
     </section>
-  </main>
-  <script src="js/script.js" defer></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+ </main>
+<!-- Bootstrap JavaScript -->
+        <script type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+        crossorigin="anonymous"></script>
 </body>
 </html>
