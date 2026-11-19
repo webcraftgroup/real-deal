@@ -1,0 +1,443 @@
+/* Real Deal Brand Colors */
+
+:root {
+    --brand-blue: #2760a1;
+    --brand-orange: #dc3c17;
+    --brand-yellow: #f5ba48;
+    --brand-cream: #fffdef;
+}
+
+/* Contact Us page */
+
+body.contact-page {
+    background-color: var(--brand-cream);
+    font-family: 'Outfit', sans-serif;
+    color: var(--brand-blue);
+    margin: 0;
+    padding: 8px 15px;
+}
+
+.contact-page *,
+.contact-page *::before,
+.contact-page *::after {
+    box-sizing: border-box;
+}
+
+/* Skip Link */
+
+.contact-page .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    background-color: white;
+    color: var(--brand-blue);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.contact-page .skip-link:focus {
+    left: 10px;
+}
+
+/* Contact Us header */
+
+.contact-header {
+    background-color: var(--brand-blue);
+    border-radius: 20px;
+    margin: 0;
+    padding: 25px 30px 10px;
+}
+
+/* Navigation bar*/
+
+.contact-header .site-nav {
+    background-color: var(--brand-cream);
+    border-radius: 5px;
+    padding: 2px 8px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation logo */
+
+.contact-header .brand-logo {
+    display: block;
+    width: 30px;
+    height: auto;
+}
+
+/* Navigation links */
+
+.contact-header .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.contact-header .nav-links a {
+    color: var(--brand-blue);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.contact-header .nav-links a:hover {
+    color: var(--brand-orange);
+    text-decoration: underline;
+}
+
+.contact-header .nav-links a[aria-current="page"] {
+    text-decoration: underline;
+} 
+
+.contact-header .nav-links a:focus-visible {
+    outline: 2px solid var(--brand-orange);
+    outline-offset: 4px;
+}
+
+
+.contact-header .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact-header .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 30px;
+    background-color: var(--brand-blue);
+    margin: 5px 0;
+}
+
+.contact-header h1 {
+    font-family: 'Poetsen One', sans-serif;
+    color: var(--brand-yellow);
+    font-size: 50px;
+    text-align: center;
+    margin: 8px 0 0;
+    padding-bottom: 15px;
+}
+
+.contact-page main {
+    background-color: var(--brand-cream);
+    padding: 35px 8% 25px;    
+}
+
+/* Have  a Question section */
+
+.contact-introduction {
+    margin-bottom: 30px;
+}
+
+.contact-introduction h2 {
+    color: var(--brand-blue);
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contact-introduction p {
+    color: black;
+    font-size: 17px;
+    margin: 5;
+}
+
+/* Contact Information */
+
+.contact-information {
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+.contact-information h2 {
+    color: var(--brand-blue);
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 35px;
+    margin-bottom: 30px;
+    margin-top: 30px
+}
+
+.contact-item h3 {
+    color: var(--brand-blue);
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 15px
+}
+
+.contact-item p {
+    color: black;
+    font-size: 15px;
+    margin: 7px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.contact-item a:hover {
+    color: var(--brand-blue);
+    text-decoration: underline;
+}
+
+.contact-item a:focus-visible {
+    outline: 2px solid var(--brand-orange);
+    outline-offset: 3px;
+}
+
+.store-details {
+    margin-top: 50px;
+}
+
+.store-details p {
+    color: black;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.get-in-touch {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-logo {
+    display: block;
+    width: 45px;
+    height: auto;
+    margin: 0 auto 8px;
+}
+
+.get-in-touch > a {
+    text-decoration: none;
+    color: inherit;
+}
+.get-in-touch > a:hover {
+    color: var(--brand-orange);
+    text-decoration: none;
+}
+
+.get-in-touch > a:focus-visible {
+    outline: 2px solid var(--brand-orange);
+    outline-offset: 4px;
+}
+
+.get-in-touch h2 {
+    font-family: 'Poetsen One', sans-serif;
+    color: var(--brand-blue);
+    font-size: 1rem;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+.contact-form-section {
+    display: grid;
+    grid-template-columns: 20% minmax(0, 1fr);
+    text-align: left;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-form-section h3 {
+    color: var(--brand-blue);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+#contact-form {
+    width: 100%;
+}
+
+#contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    display: block;
+    width: 100%;
+    background-color: var(--brand-cream);
+    color: black;
+    border: 1px solid var(--brand-yellow);
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+}
+
+#contact-form textarea {
+    min-height: 145px;
+    resize: vertical;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: 2px solid var(--brand-blue);
+    outline-offset: 2px;
+    border-color: var(--brand-blue);
+}
+
+#contact-form button {
+    background-color: var(--brand-yellow);
+    color: var(--brand-blue);
+    border: 1px solid var(--brand-blue);
+    border-radius: 12px;
+    padding: 6px 14px;
+    font-family: 'Poetsen One', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: var(--brand-orange);
+    color: var(--brand-cream);
+}
+
+#contact-form button:focus-visible {
+    outline: 3px solid var(--brand-blue);
+    outline-offset: 3px;
+}
+
+.website-footer {
+    background-color: var(--brand-blue);
+    color: var(--brand-cream);
+    padding: 16px 20px;
+    border-radius: 18px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.8rem;
+}
+
+.website-footer .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.website-footer a {
+    color: var(--brand-cream);
+    text-decoration: underline;
+}
+
+.website-footer a:hover {
+    color: var(--brand-yellow);
+}
+
+.website-footer a:focus-visible {
+    outline: 2px solid var(--brand-cream);
+    outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    .contact-page main {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contact-details {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 20px;
+    }
+
+    .contact-form-section {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact-form-section h3 {
+        margin: 5px 0;
+
+    }
+}
+
+@media (max-width: 480px) {
+    body.contact-page {
+        padding: 6px;
+    }
+
+    .contact-header {
+        padding: 10px;
+    }
+
+    .contact-header .site-nav {
+        flex-wrap: wrap;
+    }
+
+    .contact-header .menu-toggle {
+        display: block;
+    }
+
+    .contact-header .nav-links {
+        display: none;
+        flex-direction:  column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 12px;
+        padding: 12px 5px;
+    }
+
+    .contact-header .nav-links.is-open {
+        display: flex;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem; 
+    }
+
+    .contact-page main {
+        padding: 25px 5%;
+    }
+
+    .contact-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+    }
+
+    .contact-introduction p,
+    .contact-item p,
+    .store-details p {
+        font-size: 0.85rem;
+    }
+
+    .contact-form-section {
+        display: block;
+    }
+
+    .contact-form-section h3 {
+        margin-bottom: 15px;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .website-footer {
+        padding: 14px;
+        flex-wrap: wrap;
+    }
+}
+
