@@ -13,7 +13,7 @@ body.contact-page {
     background-color: var(--brand-cream);
     font-family: 'Outfit', sans-serif;
     color: var(--brand-blue);
-    margin: 0;
+    margin: 15px;
     padding: 8px 15px;
 }
 
@@ -41,84 +41,92 @@ body.contact-page {
 
 /* Contact Us header */
 
+.navbar {
+  position: relative;
+  z-index: 3;
+  margin: 15px 15px;
+  min-height: 80px;
+  padding: 0px 18px;
+  border-radius: 15px;
+  background: var(--brand-cream);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  padding: 10px 35px 10px; 
+  color: var(--brand-blue); 
+  font-size: 1.25rem; 
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+    color: var(--brand-orange);
+}
+
+.navbar .nav-link.active { 
+  color: var(--brand-blue); 
+  font-weight: 900; 
+  text-decoration: underline; 
+  text-underline-offset: 3px; 
+}
+
+/* Navigation hamburger button */
+.site-nav .navbar-toggler {
+    background-color: var(--brand-cream);
+    color: var(--brand-blue);
+    border: 2px solid var(--brand-blue);
+    border-radius: 15px;
+}
+
+/* Navigation drawer */
+#mainNav {
+    background-color: var(--brand-cream);
+    color: var(--brand-blue);
+    border: none;
+}
+
+/* Drawer heading */
+#mainNav .drawer-title {
+    color: var(--brand-blue);
+}
+
+/* Drawer navigation links */
+#mainNav .nav-link {
+    color: var(--brand-blue);
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link:focus-visible {
+    color: var(--brand-orange);
+}
+
 .contact-header {
     background-color: var(--brand-blue);
-    border-radius: 20px;
+    min-height: 300px;
+    border-radius: 28px;
     margin: 0;
     padding: 25px 30px 10px;
 }
 
-/* Navigation bar*/
-
-.contact-header .site-nav {
-    background-color: var(--brand-cream);
-    border-radius: 5px;
-    padding: 2px 8px;
-    margin-bottom: 3px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.brand-logo { 
+  position: absolute;
+  width: 85px; 
+  height: 75px; 
+  object-fit: contain; 
+  object-position: center;
+  transform: translateY(-50%);
 }
 
-/* Navigation logo */
-
-.contact-header .brand-logo {
-    display: block;
-    width: 30px;
-    height: auto;
-}
-
-/* Navigation links */
-
-.contact-header .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.contact-header .nav-links a {
-    color: var(--brand-blue);
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.contact-header .nav-links a:hover {
-    color: var(--brand-orange);
-    text-decoration: underline;
-}
-
-.contact-header .nav-links a[aria-current="page"] {
-    text-decoration: underline;
-} 
-
-.contact-header .nav-links a:focus-visible {
-    outline: 2px solid var(--brand-orange);
-    outline-offset: 4px;
-}
-
-
-.contact-header .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.contact-header .menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 30px;
-    background-color: var(--brand-blue);
-    margin: 5px 0;
+.navbar-toggler { 
+  border-color: var(--brand-blue); 
 }
 
 .contact-header h1 {
     font-family: 'Poetsen One', sans-serif;
     color: var(--brand-yellow);
-    font-size: 50px;
+    font-size: 75px;
     text-align: center;
-    margin: 8px 0 0;
+    margin: 50px 0 0;
     padding-bottom: 15px;
 }
 
