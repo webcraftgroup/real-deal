@@ -6,28 +6,50 @@
     --brand-orange: #dc3c17;
     --brand-yellow: #f5ba48;
     --brand-cream: #fffdef;
+    --brand-peach: #ffefdc; 
 }
 
 /* Real Deal Navigation Bar */
 
-.navbar {
-    background-color: var(--brand-cream);
-    border-radius: 14px;
-    margin: 24px 40px 16px; 
-    padding: 1px 0;   
+body { 
+  margin: 0;
+  padding: 0 13px 14px;
+  background: var(--brand-cream);
 }
 
-/* Blue background behind the rounded navbar */
-header {
-    background-color: var(--brand-blue);
-    display: flow-root;
-    border-radius: 28px 28px 0 0;
-    margin: 8px 15px 0;
+.page-frame { 
+  margin: 8px auto;
+  padding: 10px; 
+  border: 5px solid #fffdef; 
+  border-radius: 26px; 
+  background: var(--brand-cream); 
+  overflow: hidden; 
+}
+
+
+h1,
+h2 {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.navbar {
+  position: relative;
+  z-index: 3;
+  margin: 40px 45px;
+  min-height: 80px;
+  padding: 3px 18px;
+  border-radius: 15px;
+  background: var(--brand-cream);
 }
 
 .navbar-brand,
 .navbar .nav-link {
-    color: var(--brand-blue);
+  padding: 10px 35px 10px; 
+  color: var(--brand-blue); 
+  font-size: 1.25rem; 
 }
 
 .navbar .nav-link:hover,
@@ -35,21 +57,39 @@ header {
     color: var(--brand-orange);
 }
 
+.navbar .nav-link.active { 
+  color: var(--brand-blue); 
+  font-weight: 900; 
+  text-decoration: underline; 
+  text-underline-offset: 3px; 
+}
+
+/* Blue background behind the rounded navbar */
+header {
+    background-color: var(--brand-blue);
+    display: flow-root;
+    border-radius: 28px 28px 0 0;
+}
+
 /* Real Deal Logo */
 
-.brand-logo {
-    width: 65px;
-    height: auto;
+.brand-logo { 
+  position: absolute;
+  width: 85px; 
+  height: 75px; 
+  object-fit: contain; 
+  object-position: center;
+  transform: translateY(-50%);
 }
 
 /* Everyday Comfort Product Hero */
 
 .product-hero {
     background-color: var(--brand-blue);
+    height: 580px;
     color: white;
     padding: 70px 0;
     border-radius: 0 0 28px 28px;
-    margin: 0 15px;
 }
 
 /* Product Image */
@@ -119,7 +159,7 @@ body {
 /* Real Deal Ordering Panel */
 
 .order-panel {
-    background-color: #ffecdc;
+    background-color:  var(--brand-peach);
     border-radius: 24px;
     padding: 30px;
 }
@@ -244,47 +284,6 @@ body {
     line-height: 1.5;
 }
 
-/* Real Deal Footer */
-
-.site-footer {
-    background-color: var(--brand-blue);
-    color: white;
-    padding: 20px 0;
-    border-radius: 0 0 28px 28px;
-    margin: 0 16px 16px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.footer-content p {
-    margin: 0;
-}
-
-.footer-content nav {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.footer-content a {
-    color: white;
-    text-decoration: underline;
-}
-
-.footer-content a:hover {
-    color: var(--brand-yellow);
-}
-
-.footer-content a:focus-visible {
-    outline: 2px solid white;
-    outline-offset: 4px;
-}
 
 /* Product Details Heading */
 
@@ -303,18 +302,14 @@ body {
   color: var(--brand-yellow);
 }
 
-.about-logo-wrap {
-    position: relative;
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.about-logo {
-    display: block;
-    width: 100px;
-    height: auto;
-    margin: 0;
+.about-section { 
+  display: flex;
+  min-height: 300px;
+  padding-top: 60px;
+  flex-direction: column;
+  border-radius: 38px;
+  background: var(--brand-yellow);
+  text-align: center;
 }
 
 .about-sparkle {
@@ -325,48 +320,70 @@ body {
 
 .sparkle-blue {
     color: var(--brand-blue);
-    font-size: 1.4rem;
-    left: -60px;
-    top: 30px;
-}
+    font-size: 1.8rem;
+    left: 42%;
+    padding-top: 2%;
+  }
 
 .sparkle-orange {
     color: var(--brand-orange);
     font-size: 2.9rem;
-    left: -50px;
-    top: 2px;
+    left: 43%;
 }
 
-/* Decorative strokes beside The Details */
-
-.details-heading {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.about-logo { 
+    display: block; 
+    width: 180px; 
+    height: 180px; 
+    margin: 0 auto 0; 
+    object-fit: contain; 
 }
 
-.details-spark {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 5px;
-    transform: rotate(-15deg);
+.about-section h2 { 
+    color: var(--brand-blue);
+    margin: 0 0 25px; 
+    font-size: 2.0rem; 
+    font-weight: 500; 
 }
 
-.details-spark span {
-    display: block;
-    width: 27px;
-    height: 8px;
-    background-color: var(--brand-yellow);
-    border-radius: 100px;
-    clip-path: polygon(0% 50%, 80% 0%, 100% 10%, 100% 90%, 80% 100%);
+.about-section p {
+    color: var(--brand-blue);
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding-bottom: 60px;
+    font-size: 1.3rem; 
+    line-height: 1.5; 
 }
 
-.details-spark span:first-child {
-    transform: rotate(-25deg) translateX(5px);
+.site-footer {
+    min-height: 62px; 
+    margin-top: auto;
+    width: 100%;
+    padding: 16px 26px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 16px; 
+    border-radius: 18px 18px 18px 18px; 
+    background: var(--brand-blue); 
+    color: #fff; 
+    font-size: .9rem; 
 }
 
-.details-spark span:last-child {
-    transform: rotate(25deg) translateX(5px);
+.site-footer p { 
+  margin: 0;
+  color: #fffdef;  
+}
+
+.footer-links { 
+  display: flex; 
+  gap: 20px; 
+}
+
+.site-footer a { 
+  color: #fffdef; 
+  text-decoration: underline; 
+  text-underline-offset: 2px; 
 }
 
 /* Evenly spaced shirt-size buttons */
