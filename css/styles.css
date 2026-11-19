@@ -293,6 +293,15 @@ body {
     font-size: 1.75rem;
     margin-bottom: 18px;
 }
+
+.d-flex{
+    color: black;
+}
+
+.product-details p {
+    color: black;
+}
+
 .product-tagline {
   margin-bottom: 12px;
   letter-spacing: 2px;
