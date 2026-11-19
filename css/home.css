@@ -67,6 +67,33 @@ h2 {
   text-underline-offset: 3px; 
 }
 
+/* Navigation hamburger button */
+.site-nav .navbar-toggler {
+    background-color: var(--brand-cream);
+    color: var(--brand-blue);
+    border: 2px solid var(--brand-blue);
+    border-radius: 15px;
+}
+
+#mainNav {
+    background-color: var(--brand-cream);
+    color: var(--brand-blue);
+    border: none;
+}
+
+#mainNav .drawer-title {
+    color: var(--brand-blue);
+}
+
+#mainNav .nav-link {
+    color: var(--brand-blue);
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link:focus-visible {
+    color: var(--brand-orange);
+}
+
 .site-header { 
   position: relative; 
   min-height: 700px; 
