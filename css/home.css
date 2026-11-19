@@ -1,0 +1,392 @@
+/* Brand colors and shared page settings. */
+:root { 
+  --brand-cream: #fffdef; 
+  --brand-blue: #2760a1; 
+  --brand-yellow: #f5ba48; 
+  --brand-orange: #dc3c17; 
+  --brand-peach: #ffefdc; 
+}
+
+* { box-sizing: border-box; }
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 1.5rem; 
+}
+
+body { 
+  margin: 0;
+  padding: 0 13px 14px;
+  background: var(--brand-cream);
+  color: var(--brand-blue);
+  font-family: "Outfit", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.page-frame { 
+  margin: 8px auto;
+  padding: 10px; 
+  border: 5px solid #fffdef; 
+  border-radius: 26px; 
+  background: var(--brand-cream); 
+  overflow: hidden; 
+}
+
+.navbar {
+  position: relative;
+  z-index: 3;
+  margin: 25px 20px;
+  min-height: 80px;
+  padding: 3px 18px;
+  border-radius: 15px;
+  background: var(--brand-cream);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  padding: 10px 35px 10px; 
+  color: var(--brand-blue); 
+  font-size: 1.25rem; 
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+    color: var(--brand-orange);
+}
+
+.navbar .nav-link.active { 
+  color: var(--brand-blue); 
+  font-weight: 900; 
+  text-decoration: underline; 
+  text-underline-offset: 3px; 
+}
+
+.site-header { 
+  position: relative; 
+  min-height: 700px; 
+  padding: 14px 24px 22px; 
+  overflow: hidden; 
+  border-radius: 28px; 
+  background: var(--brand-blue) url("../images/home-header-bg.png") center/cover no-repeat; 
+}
+
+.brand-logo { 
+  position: absolute;
+  width: 85px; 
+  height: 75px; 
+  object-fit: contain; 
+  object-position: center;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler { 
+  border-color: var(--brand-blue); 
+}
+
+.hero { 
+  min-height: 360px; 
+  padding: 22px 12px 0; 
+}
+
+.hero-copy { 
+  position: relative; 
+  z-index: 2; 
+  padding-left: 20px;
+}
+
+.hero-copy img{
+  position: absolute;
+  width: 90px;
+  top: 10px;
+  left: 700px;
+}
+
+.hero h1 { 
+  margin: 35px 0 24px;
+  margin-left: 50px;
+  color: #fff; 
+  font-size: 8rem; 
+  line-height: 1.08; 
+  letter-spacing: -.04em; 
+  font-weight: 900; 
+}
+
+.hero h1 span { 
+  color: var(--brand-yellow); 
+}
+
+.shop-button, .product-button { 
+  border: 0; 
+  border-radius: 18px; 
+  background: var(--brand-orange); 
+  color: white; 
+  font-family: "Poetsen One", sans-serif;
+  letter-spacing: .08em; 
+}
+
+.shop-button { 
+  margin-top: 50px;
+  width: min(100%, 650px); 
+  padding: 8px 50px;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin-left: 60px;
+}
+
+.shop-button:hover, .shop-button:focus, .product-button:hover, .product-button:focus { 
+  background: #b92f12; 
+  color: #fff; 
+}
+
+.hero-art { 
+  position: relative; 
+  min-height: 300px; 
+}
+
+.hero-shirt { 
+  position: absolute; 
+  width: min(65%, 270px); 
+  height: 310px; 
+  object-fit: contain; 
+  filter: drop-shadow(0 4px 0 var(--brand-yellow)); 
+}
+
+.hero-shirt-one { 
+  z-index: 2; 
+  left: 25%;
+  top: 0; 
+  transform: rotate(-20deg) scale(1.9);
+}
+
+.hero-shirt-two { 
+  z-index: 1; 
+  left: 53%; 
+  top: 50px; 
+  transform: rotate(15deg) scale(1.6); 
+}
+
+.hero-flower-1 { 
+  position: absolute; 
+  z-index: 4; 
+  left: 76%;
+  bottom: 54%;
+  color: var(--brand-cream); 
+  font-size: 4rem;
+  transform: rotate(-18deg);
+}
+
+.hero-flower-2 { 
+  position: absolute; 
+  z-index: 3; 
+  left: 26%;
+  bottom: -50%;
+  color: var(--brand-orange); 
+  font-size: 6rem;
+}
+
+.products-section { 
+  min-height: 600px; 
+  padding: 60px 24px 100px; 
+  position: relative; 
+}
+
+.section-title { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 12px;
+  margin: 2px 0 50px; 
+  color: var(--brand-blue); 
+  font-size: 2.5rem; 
+  font-weight: 900; 
+}
+
+.section-title img { 
+  width: 40px; 
+  height: 37px; 
+  object-fit: contain; 
+}
+
+.product-grid { 
+  position: relative; 
+  z-index: 1; 
+}
+
+.product-card { 
+  height: 100%; 
+  min-height: 590px; 
+  padding: 13px 13px 16px; 
+  border-radius: 26px; 
+  background: var(--brand-peach); 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+}
+
+.product-image { 
+  display: block; 
+  width: 100%; 
+  max-width: 380px; 
+  height: 365px; 
+  object-fit: contain;
+  transition: transform 0.3s ease; 
+}
+
+.product-image:hover {
+    transform: scale(1.03);
+}
+
+.product-card h3 { 
+  min-height: 2.3em; 
+  margin: 8px 0 -20px; 
+  color: var(--brand-blue); 
+  font-size: 1.8rem;
+  font-weight: 700; 
+}
+
+.price { 
+  margin: 0 0 13px; 
+  color: var(--brand-blue); 
+  font-size: 1.6rem;
+}
+
+.product-button { 
+  width: 100%; 
+  margin-top: auto; 
+  padding: 8px 10px; 
+  font-size: 1.2rem; 
+  letter-spacing: 1px;
+}
+
+.decoration { 
+  position: absolute; 
+  width: 80px; 
+  height: auto; 
+}
+
+.decoration-left { 
+  top: 110px;
+  left: 130px; 
+  transform: scale(1.2); 
+}
+
+.decoration-right { 
+  top: 100px;
+  right: 130px; 
+  transform: rotate(-10deg) scale(1.2); 
+}
+
+.about-section { 
+  display: flex;
+  min-height: 300px;
+  padding-top: 60px;
+  flex-direction: column;
+  border-radius: 38px;
+  background: var(--brand-yellow);
+  text-align: center;
+}
+
+.about-sparkle {
+    position: absolute;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.sparkle-blue {
+    color: var(--brand-blue);
+    font-size: 1.8rem;
+    left: 42%;
+    padding-top: 2%;
+  }
+
+.sparkle-orange {
+    color: var(--brand-orange);
+    font-size: 2.9rem;
+    left: 43%;
+}
+
+.about-logo { 
+  display: block; 
+  width: 180px; 
+  height: 180px; 
+  margin: 0 auto 0; 
+  object-fit: contain; 
+}
+
+.about-section h2 { 
+  margin: 0 0 25px; 
+  font-size: 2.0rem; 
+  font-weight: 500; 
+}
+
+.about-section p { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding-bottom: 60px;
+  font-size: 1.3rem; 
+  line-height: 1.5; 
+}
+
+.site-footer {
+  min-height: 62px; 
+  margin-top: auto;
+  width: 100%;
+  padding: 16px 26px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 16px; 
+  border-radius: 18px 18px 18px 18px; 
+  background: var(--brand-blue); 
+  color: #fff; 
+  font-size: .9rem; 
+}
+
+.site-footer p { 
+  margin: 0;
+  color: #fffdef;  
+}
+
+.footer-links { 
+  display: flex; 
+  gap: 20px; 
+}
+
+.site-footer a { 
+  color: #fffdef; 
+  text-decoration: underline; 
+  text-underline-offset: 2px; 
+}
+
+@media (min-width: 768px) { .footer-contact { display: block; } }
+@media (max-width: 767.98px) {
+  .page-frame { width: calc(100% - 12px); margin: 6px auto; padding: 6px; border-width: 4px; border-radius: 20px; }
+  .site-header { padding: 10px 12px 18px; min-height: auto; }
+  .navbar { padding: 3px 10px; }
+  .navbar .navbar-collapse { padding-top: 8px; }
+  .navbar .nav-link { padding: 9px 8px !important; }
+  .hero { text-align: center; padding: 28px 4px 0; }
+  .hero-copy { padding: 0; }
+  .hero h1 { margin-bottom: 14px; }
+  .shop-button { margin: 0 auto; }
+  .hero-art { min-height: 260px; margin-top: 12px; }
+  .hero-shirt { height: 270px; width: 62%; }
+  .hero-shirt-one { left: 9%; }
+  .hero-shirt-two { left: 36%; }
+  .products-section { padding: 27px 16px 42px; }
+  .product-card { min-height: 292px; }
+  .product-image { height: 168px; }
+  .decoration-left { left: 2px; width: 42px; }
+  .decoration-right { right: 0; width: 42px; }
+  .about-section { padding: 30px 8% 26px; }
+  .about-spark { left: 22%; }
+  .site-footer { padding: 14px 12px; flex-wrap: wrap; justify-content: space-between; font-size: .72rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
