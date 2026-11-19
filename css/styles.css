@@ -223,13 +223,10 @@ body {
 }
 
 .about-logo {
-    display: block;
-    width: 100px;
-    height: auto;
-    background-color: var(--brand-cream);
-    padding: 10px;
-    border-radius: 8px;
-    margin: 0 auto 20px;
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 0 auto 20px;
 }
 
 .about-real-deal h2 {
@@ -317,9 +314,6 @@ body {
     display: block;
     width: 100px;
     height: auto;
-    background-color: var(--brand-cream);
-    padding: 4px;
-    border-radius: 8px;
     margin: 0;
 }
 
