@@ -135,6 +135,7 @@ body {
 
 .product-hero h1 {
     font-family: 'Poetsen One', sans-serif;
+    color: var(--brand-yellow);
     font-size: 5rem;
     line-height: 1.1;
 
