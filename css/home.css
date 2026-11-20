@@ -306,6 +306,16 @@ h2 {
   font-weight: 700; 
 }
 
+.product-name {
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+
+.product-name:hover {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}
+
 .price { 
   margin: 0 0 13px; 
   color: var(--brand-blue); 
