@@ -10,6 +10,10 @@
     --muted: #737373;
     --border: #dedede;
     --cream: #fffdef;
+    --brand-blue: #2760a1;
+    --brand-orange: #dc3c17;
+    --brand-yellow: #f5ba48;
+    --brand-cream: #fffdef;
 }
 
 /* General Page Styling */
@@ -51,16 +55,11 @@ body.privacy-page {
 /* Main Outer Frame */
 
 .page-frame {
-    max-width: 1040px;
-    min-height: calc(100vh - 20px);
-    margin: 0 auto;
-    padding: 6px;
-    background: #fff;
-    border: 2px solid #d5d5d5;
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    background-color: var(--brand-cream);
+    font-family: 'Outfit', sans-serif;
+    color: var(--brand-blue);
+    margin: 15px;
+    padding: 8px 15px;
 }
 
 /* Header */
@@ -75,57 +74,84 @@ body.privacy-page {
 
 /* Navigation */
 
-.privacy-page .site-nav {
-    position: relative;
-    z-index: 3;
-    margin: 15px;
-    min-height: 80px;
-    padding: 0 18px;
+.navbar {
+  position: relative;
+  z-index: 3;
+  margin: 15px 15px;
+  min-height: 80px;
+  padding: 0px 18px;
+  border-radius: 15px;
+  background: var(--brand-cream);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  padding: 10px 35px 10px; 
+  color: var(--brand-blue); 
+  font-size: 1.25rem; 
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+    color: var(--brand-orange);
+}
+
+.navbar .nav-link.active { 
+  color: var(--brand-blue); 
+  font-weight: 900; 
+  text-decoration: underline; 
+  text-underline-offset: 3px; 
+}
+
+/* Navigation hamburger button */
+.site-nav .navbar-toggler {
+    background-color: var(--brand-cream);
+    color: var(--brand-blue);
+    border: 2px solid var(--brand-blue);
     border-radius: 15px;
-    background: var(--cream);
 }
 
-.privacy-page .navbar-brand {
-    padding: 10px 35px;
-}
-
-.privacy-page .brand-logo {
-    display: block;
-    width: 85px;
-    height: 75px;
-    object-fit: contain;
-    object-position: center;
-}
-
-.privacy-page .navbar-toggler {
-    background-color: var(--cream);
-    color: var(--blue);
-    border: 2px solid var(--blue);
-    border-radius: 15px;
-}
-
-.privacy-page .site-nav a:focus-visible,
-.privacy-page .site-nav button:focus-visible {
-    outline: 3px solid #12487f;
-    outline-offset: 3px;
-}
-
-/* Navigation Drawer */
-
-.privacy-page #mainNav {
-    background-color: var(--cream);
-    color: var(--blue);
+/* Navigation drawer */
+#mainNav {
+    background-color: var(--brand-cream);
+    color: var(--brand-blue);
     border: none;
 }
 
-.privacy-page #mainNav .drawer-title,
-.privacy-page #mainNav .nav-link {
-    color: var(--blue);
+/* Drawer heading */
+#mainNav .drawer-title {
+    color: var(--brand-blue);
 }
 
-.privacy-page #mainNav .nav-link:hover,
-.privacy-page #mainNav .nav-link:focus-visible {
-    color: var(--orange);
+/* Drawer navigation links */
+#mainNav .nav-link {
+    color: var(--brand-blue);
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link:focus-visible {
+    color: var(--brand-orange);
+}
+
+.page-header {
+    background-color: var(--brand-blue);
+    min-height: 300px;
+    border-radius: 28px;
+    margin: 0;
+    padding: 25px 30px 10px;
+}
+
+.brand-logo { 
+  position: absolute;
+  width: 85px; 
+  height: 75px; 
+  object-fit: contain; 
+  object-position: center;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler { 
+  border-color: var(--brand-blue); 
 }
 
 /* Hero Title */
@@ -138,7 +164,7 @@ body.privacy-page {
 .hero-title h1 {
     margin: 0 0 14px;
     font-family: 'Poetsen One', sans-serif;
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: 4rem;
     line-height: 1.1;
     color: var(--gold);
     font-weight: 800;
@@ -147,28 +173,35 @@ body.privacy-page {
 .hero-title p {
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 12px;
+    font-size: 16px;
+}
+
+.privacy-page .site-header {
+    background-color: var(--brand-blue);
+    min-height: 300px;
+    border-radius: 28px;
+    margin: 0;
+    padding: 25px 30px 10px;
 }
 
 /* Main Content */
 
-.privacy-page main {
-    flex: 1;
-}
-
 .content-layout {
     display: grid;
-    grid-template-columns: 190px minmax(0, 1fr);
-    gap: 50px;
-    padding: 48px 40px 30px;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 150px;
+    max-width: 1600px;
+    margin: 30px 80px 0;
+    padding: 48px 0px 30px;
 }
 
 /* Sidebar */
 
 .sidebar {
-    align-self: start;
     position: sticky;
     top: 16px;
+    align-self: start;
+    width: 100%;
 }
 
 .sidebar nav {
@@ -178,19 +211,20 @@ body.privacy-page {
 
 .side-link {
     display: block;
+    width: 120%;
+    padding: 20px 12px;
     text-decoration: none;
     color: #737373;
-    padding: 12px 8px;
     border-bottom: 1px solid var(--border);
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1.4;
-    transition: color 0.2s, background 0.2s;
 }
 
 .side-link.active {
     background: var(--gold);
+    font-weight: 700;
     color: #4c3b1a;
-    border-radius: 5px;
+    border-radius: 6px;
     border-bottom-color: transparent;
 }
 
@@ -200,81 +234,77 @@ body.privacy-page {
 
 /* Privacy Content */
 
-.policy-content {
+.content {
     width: 100%;
-    max-width: 650px;
+    max-width: none;
+    margin-left: 40px;
 }
 
-.policy-section {
+.content-section {
     scroll-margin-top: 24px;
     margin-bottom: 28px;
 }
 
-.policy-section h2 {
+.content-section h2 {
     margin: 0 0 9px;
     color: var(--blue);
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
-.policy-section p {
-    margin: 0;
+.content-section p {
+    margin-bottom: 50px;
     color: #363636;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.65;
 }
 
-.policy-section a {
+.content-section a {
     color: var(--blue);
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
-.policy-section a:hover {
+.content-section a:hover {
     color: var(--orange);
 }
 
-.policy-section a:focus-visible {
+.content-section a:focus-visible {
     outline: 2px solid var(--orange);
     outline-offset: 3px;
 }
 
 /* Footer */
 
-.privacy-page .site-footer {
-    background: var(--blue);
-    color: rgba(255, 255, 255, 0.9);
-    border-radius: 18px;
-    min-height: 70px;
+.site-footer {
+    min-height: 62px; 
+    margin-top: 20px;
     width: 100%;
-    margin-top: auto;
-    padding: 16px 26px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    font-size: 14px;
+    padding: 16px 26px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 16px; 
+    border-radius: 18px 18px 18px 18px; 
+    background: var(--brand-blue); 
+    color: #fff; 
+    font-size: .9rem; 
 }
 
-.privacy-page .footer-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.site-footer p { 
+  margin: 0;
+  color: #fffdef;  
 }
 
-.privacy-page .footer-links a {
-    color: var(--cream);
-    text-decoration: underline;
-    text-underline-offset: 2px;
+.footer-links { 
+  display: flex; 
+  gap: 20px; 
 }
 
-.privacy-page .footer-links a:hover {
-    color: var(--gold);
-}
-
-.privacy-page .footer-links a:focus-visible {
-    outline: 3px solid var(--gold);
-    outline-offset: 4px;
+.site-footer a { 
+  color: #fffdef; 
+  text-decoration: underline; 
+  text-underline-offset: 2px; 
 }
 
 /* Tablet and Mobile */
@@ -338,15 +368,15 @@ body.privacy-page {
         border-color: var(--gold);
     }
 
-    .policy-section {
+    .content-section {
         margin-bottom: 24px;
     }
 
-    .policy-section h2 {
+    .content-section h2 {
         font-size: 16px;
     }
 
-    .policy-section p {
+    .content-section p {
         font-size: 13px;
     }
 
