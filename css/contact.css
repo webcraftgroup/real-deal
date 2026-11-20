@@ -70,12 +70,6 @@ body.contact-page {
   text-underline-offset: 3px; 
 }
 
-.site-nav a:focus-visible,
-.site-nav button:focus-visible {
-    outline: 3px solid #12487f;
-    outline-offset: 3px;
-}
-
 /* Navigation hamburger button */
 .site-nav .navbar-toggler {
     background-color: var(--brand-cream);
@@ -144,19 +138,21 @@ body.contact-page {
 /* Have  a Question section */
 
 .contact-introduction {
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
 }
 
 .contact-introduction h2 {
     color: var(--brand-blue);
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 35px;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
 .contact-introduction p {
     color: black;
-    font-size: 17px;
+    font-size: 23px;
     margin: 5;
 }
 
@@ -164,14 +160,14 @@ body.contact-page {
 
 .contact-information {
     margin-bottom: 50px;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .contact-information h2 {
     color: var(--brand-blue);
-    font-size: 50px;
-    font-weight: 500;
-    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .contact-details {
@@ -179,27 +175,27 @@ body.contact-page {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 35px;
     margin-bottom: 30px;
-    margin-top: 30px
+    margin-top: 30px;
+
 }
 
 .contact-item h3 {
     color: var(--brand-blue);
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 500;
     margin-bottom: 15px
 }
 
 .contact-item p {
     color: black;
-    font-size: 15px;
-    margin: 7px;
+    font-size: 20px;
     overflow-wrap: anywhere;
 }
 
 .contact-item a {
     color: black;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .contact-item a:hover {
@@ -218,18 +214,19 @@ body.contact-page {
 
 .store-details p {
     color: black;
-    font-size: 17px;
+    font-size: 23px;
     margin-bottom: 10px;
 }
 
 .get-in-touch {
     text-align: center;
     margin-top: 30px;
+    font-size: 1rem;
 }
 
 .contact-logo {
     display: block;
-    width: 45px;
+    width: 80px;
     height: auto;
     margin: 0 auto 8px;
 }
@@ -251,7 +248,7 @@ body.contact-page {
 .get-in-touch h2 {
     font-family: 'Poetsen One', sans-serif;
     color: var(--brand-blue);
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 25px;
     text-decoration: none;
 }
@@ -332,47 +329,35 @@ body.contact-page {
     outline-offset: 3px;
 }
 
-/* Footer (same markup and look as every other page) */
 .site-footer {
-    min-height: 62px;
+    min-height: 62px; 
+    margin-top: 50px;
     width: 100%;
-    margin-top: 10px;
-    padding: 16px 26px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    border-radius: 18px;
-    background: var(--brand-blue);
-    color: #fff;
-    font-size: .9rem;
+    padding: 16px 26px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 16px; 
+    border-radius: 18px 18px 18px 18px; 
+    background: var(--brand-blue); 
+    color: #fff; 
+    font-size: .9rem; 
 }
 
-.site-footer .footer-links {
-    display: flex;
-    gap: 20px;
+.site-footer p { 
+  margin: 0;
+  color: #fffdef;  
 }
 
-.site-footer a {
-    color: #fffdef;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+.footer-links { 
+  display: flex; 
+  gap: 20px; 
 }
 
-.site-footer a:hover {
-    color: var(--brand-yellow);
-}
-
-.site-footer a:focus-visible {
-    outline: 3px solid var(--brand-yellow);
-    outline-offset: 4px;
-}
-
-/* Required-fields note */
-.form-note {
-    color: black;
-    font-size: 15px;
-    margin: 0 0 15px;
+.site-footer a { 
+  color: #fffdef; 
+  text-decoration: underline; 
+  text-underline-offset: 2px; 
 }
 
 @media (max-width: 768px) {
@@ -459,10 +444,9 @@ body.contact-page {
         font-size: 1rem;
     }
 
-    .site-footer {
-        padding: 14px 12px;
+    .website-footer {
+        padding: 14px;
         flex-wrap: wrap;
-        font-size: .72rem;
     }
 }
 
