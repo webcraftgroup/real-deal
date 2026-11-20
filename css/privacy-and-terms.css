@@ -1,0 +1,248 @@
+:root { --blue: #2c6099; --blue-dark: #25588d; --gold: #f4c258; --text: #171717; --muted: #737373; --border: #dedede; 
+} 
+* { 
+box-sizing: border-box; 
+} 
+html { 
+scroll-behavior: smooth; 
+scroll-padding-top: 24px; 
+} 
+body { 
+margin: 0; 
+padding: 10px; 
+background: #202020; 
+color: var(--text); 
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 13px; 
+} 
+/* Main outer frame */ 
+.page-frame { 
+max-width: 1040px; 
+min-height: calc(100vh - 20px); 
+margin: 0 auto; 
+padding: 6px; 
+background: #fff; 
+border: 2px solid #d5d5d5; 
+border-radius: 28px; 
+display: flex; 
+flex-direction: column; 
+overflow: hidden; 
+} 
+/* Header */ 
+.hero { 
+color: #fff; 
+background: var(--blue); 
+border-radius: 21px; 
+padding: 22px 38px 0; 
+min-height: 246px; 
+} 
+/* Navigation */ 
+.navbar { 
+min-height: 49px; 
+background: #fff; 
+border-radius: 12px; 
+display: flex; 
+align-items: center; 
+justify-content: space-between; 
+padding: 0 24px; 
+} 
+.logo { 
+display: flex; 
+flex-direction: column; 
+font-weight: 900; 
+line-height: 0.85; 
+font-size: 14px; 
+letter-spacing: -1px; 
+text-decoration: none; 
+color: #397bb3; 
+width: 42px; 
+} 
+.logo span:first-child { 
+color: #e3a742; 
+} 
+.nav-links { 
+display: flex; 
+gap: 28px; 
+align-items: center; 
+} 
+.nav-links a { 
+color: #3a5269; 
+text-decoration: none; 
+font-size: 12px; 
+transition: color 0.2s; 
+} 
+.nav-links a:hover { 
+color: #d29b35; 
+} 
+/* Hero title */ 
+.hero-title { 
+text-align: center; 
+padding: 47px 10px 38px; 
+} 
+.hero-title h1 { 
+margin: 0 0 14px; 
+font-size: clamp(28px, 4vw, 42px); 
+line-height: 1.1; 
+color: var(--gold); 
+font-weight: 800; 
+} 
+.hero-title p { 
+margin: 0; 
+color: rgba(255, 255, 255, 0.56); 
+font-size: 10px; 
+} 
+/* Content layout */ 
+.content-layout { 
+display: grid; 
+grid-template-columns: 190px minmax(0, 1fr); 
+gap: 50px; 
+padding: 48px 40px 30px; 
+flex: 1; 
+} 
+/* Sidebar */ 
+.sidebar { 
+display: flex; 
+flex-direction: column; 
+align-self: start; 
+position: sticky; 
+top: 16px; 
+} 
+.side-link { 
+text-decoration: none; 
+color: #8a8a8a; 
+padding: 12px 8px; 
+border-bottom: 1px solid var(--border); 
+font-size: 11px; 
+line-height: 1.3; 
+transition: color 0.2s, background 0.2s; 
+} 
+.side-link.active { 
+background: var(--gold); 
+color: #4c3b1a; 
+border-radius: 5px; 
+border-bottom-color: transparent; 
+} 
+.side-link:hover:not(.active) { 
+color: var(--blue-dark); 
+} 
+/* Privacy content */ 
+.policy-content { 
+max-width: 650px; 
+} 
+.policy-section { 
+scroll-margin-top: 24px; 
+margin-bottom: 28px; 
+} 
+.policy-section h2 { 
+margin: 0 0 9px; 
+font-size: 16px; 
+font-weight: 700; 
+} 
+.policy-section p { 
+margin: 0; 
+font-size: 12px; 
+line-height: 1.55; 
+color: #363636; 
+} 
+/* Footer */ 
+.footer { 
+background: var(--blue); 
+color: rgba(255, 255, 255, 0.7); 
+border-radius: 18px; 
+min-height: 70px; 
+margin-top: auto; 
+padding: 0 40px; 
+display: flex; 
+align-items: center; 
+justify-content: space-between; 
+font-size: 10px; 
+} 
+.footer-links { 
+display: flex; 
+gap: 20px; 
+} 
+.footer-links a { 
+color: rgba(255, 255, 255, 0.75); 
+} 
+/* Responsive for tablets and mobile */ 
+@media (max-width: 760px) { 
+body { 
+padding: 6px; 
+  } 
+  .page-frame { 
+border-radius: 20px; 
+min-height: calc(100vh - 12px); 
+  } 
+  .hero { 
+padding: 14px 14px 0; 
+min-height: 200px; 
+border-radius: 15px; 
+  } 
+  .navbar { 
+padding: 0 14px; 
+min-height: 46px; 
+  } 
+  .nav-links { 
+gap: 14px; 
+  } 
+  .nav-links a { 
+font-size: 11px; 
+  } 
+  .hero-title { 
+padding: 35px 6px 28px; 
+  } 
+  .hero-title h1 { 
+font-size: 29px; 
+  } 
+  .content-layout { 
+display: block; 
+padding: 26px 18px; 
+  } 
+  .sidebar { 
+position: static; 
+flex-direction: row; 
+overflow-x: auto; 
+gap: 7px; 
+padding-bottom: 18px; 
+margin-bottom: 24px; 
+  } 
+  .side-link { 
+white-space: nowrap; 
+border: 1px solid #dedede; 
+border-radius: 5px; 
+padding: 10px 12px; 
+  } 
+  .side-link.active { 
+border-color: var(--gold); 
+  } 
+  .policy-section { 
+margin-bottom: 24px; 
+  } 
+  .policy-section h2 { 
+font-size: 15px; 
+  } 
+  .policy-section p { 
+font-size: 12px; 
+  } 
+  .footer { 
+min-height: 56px; 
+padding: 0 20px; 
+border-radius: 14px; 
+  } 
+} 
+/* Small mobile screens */ 
+@media (max-width: 420px) { 
+  .nav-links { 
+gap: 10px; 
+  } 
+  .nav-links a { 
+font-size: 10px; 
+  } 
+  .logo { 
+font-size: 12px; 
+  } 
+  .content-layout { 
+padding-left: 14px; 
+padding-right: 14px; 
+  } 
+}
