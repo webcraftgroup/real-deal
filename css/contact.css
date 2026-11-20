@@ -70,6 +70,12 @@ body.contact-page {
   text-underline-offset: 3px; 
 }
 
+.site-nav a:focus-visible,
+.site-nav button:focus-visible {
+    outline: 3px solid #12487f;
+    outline-offset: 3px;
+}
+
 /* Navigation hamburger button */
 .site-nav .navbar-toggler {
     background-color: var(--brand-cream);
@@ -326,37 +332,47 @@ body.contact-page {
     outline-offset: 3px;
 }
 
-.website-footer {
-    background-color: var(--brand-blue);
-    color: var(--brand-cream);
-    padding: 16px 20px;
-    border-radius: 18px;
-    margin: 5px;
+/* Footer (same markup and look as every other page) */
+.site-footer {
+    min-height: 62px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 16px 26px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    font-size: 0.8rem;
+    gap: 16px;
+    border-radius: 18px;
+    background: var(--brand-blue);
+    color: #fff;
+    font-size: .9rem;
 }
 
-.website-footer .footer-links {
+.site-footer .footer-links {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    gap: 20px;
 }
 
-.website-footer a {
-    color: var(--brand-cream);
+.site-footer a {
+    color: #fffdef;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
-.website-footer a:hover {
+.site-footer a:hover {
     color: var(--brand-yellow);
 }
 
-.website-footer a:focus-visible {
-    outline: 2px solid var(--brand-cream);
+.site-footer a:focus-visible {
+    outline: 3px solid var(--brand-yellow);
     outline-offset: 4px;
+}
+
+/* Required-fields note */
+.form-note {
+    color: black;
+    font-size: 15px;
+    margin: 0 0 15px;
 }
 
 @media (max-width: 768px) {
@@ -443,9 +459,10 @@ body.contact-page {
         font-size: 1rem;
     }
 
-    .website-footer {
-        padding: 14px;
+    .site-footer {
+        padding: 14px 12px;
         flex-wrap: wrap;
+        font-size: .72rem;
     }
 }
 
