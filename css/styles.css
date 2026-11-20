@@ -325,6 +325,11 @@ body {
     color: black;
 }
 
+.product-details img {
+    position: relative;
+    transform: scale(0.8);
+}
+
 .product-details p {
     color: black;
 }
