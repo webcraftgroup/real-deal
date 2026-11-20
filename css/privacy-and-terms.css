@@ -2,14 +2,8 @@
 /* Real Deal Brand Colors */
 
 :root {
-    --blue: #2760a1;
-    --blue-dark: #25588d;
-    --gold: #f5ba48;
-    --orange: #dc3c17;
-    --text: #171717;
-    --muted: #737373;
+
     --border: #dedede;
-    --cream: #fffdef;
     --brand-blue: #2760a1;
     --brand-orange: #dc3c17;
     --brand-yellow: #f5ba48;
@@ -30,28 +24,11 @@ html {
 body.privacy-page {
     margin: 0;
     padding: 10px;
-    background: #202020;
-    color: var(--text);
+    background: var(--brand-cream);
+    color: black;
     font-family: 'Outfit', sans-serif;
     font-size: 14px;
 }
-
-/* Skip Link */
-
-.privacy-page .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 10px;
-    z-index: 1000;
-    padding: 10px;
-    background: white;
-    color: var(--blue);
-}
-
-.privacy-page .skip-link:focus {
-    left: 10px;
-}
-
 /* Main Outer Frame */
 
 .page-frame {
@@ -60,16 +37,6 @@ body.privacy-page {
     color: var(--brand-blue);
     margin: 15px;
     padding: 8px 15px;
-}
-
-/* Header */
-
-.privacy-page .hero {
-    color: #fff;
-    background: var(--blue);
-    border-radius: 21px;
-    padding: 22px 38px 0;
-    min-height: 246px;
 }
 
 /* Navigation */
@@ -166,32 +133,25 @@ body.privacy-page {
     font-family: 'Poetsen One', sans-serif;
     font-size: 4rem;
     line-height: 1.1;
-    color: var(--gold);
+    color: var(--brand-yellow);
     font-weight: 800;
 }
 
 .hero-title p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--brand-cream);
     font-size: 16px;
-}
-
-.privacy-page .site-header {
-    background-color: var(--brand-blue);
-    min-height: 300px;
-    border-radius: 28px;
-    margin: 0;
-    padding: 25px 30px 10px;
 }
 
 /* Main Content */
 
 .content-layout {
+    justify-content: center;
     display: grid;
     grid-template-columns: 260px minmax(0, 1fr);
     gap: 150px;
     max-width: 1600px;
-    margin: 30px 80px 0;
+    margin: 30px auto 0;
     padding: 48px 0px 30px;
 }
 
@@ -221,7 +181,7 @@ body.privacy-page {
 }
 
 .side-link.active {
-    background: var(--gold);
+    background: var(--brand-yellow);
     font-weight: 700;
     color: #4c3b1a;
     border-radius: 6px;
@@ -229,7 +189,7 @@ body.privacy-page {
 }
 
 .side-link:hover:not(.active) {
-    color: var(--blue-dark);
+    color: var(--brand-blue);
 }
 
 /* Privacy Content */
@@ -247,7 +207,7 @@ body.privacy-page {
 
 .content-section h2 {
     margin: 0 0 9px;
-    color: var(--blue);
+    color: var(--brand-blue);
     font-size: 1.8rem;
     font-weight: 700;
 }
@@ -260,17 +220,17 @@ body.privacy-page {
 }
 
 .content-section a {
-    color: var(--blue);
+    color: var(--brand-blue);
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
 .content-section a:hover {
-    color: var(--orange);
+    color: var(--brand-orange);
 }
 
 .content-section a:focus-visible {
-    outline: 2px solid var(--orange);
+    outline: 2px solid var(--brand-orange);
     outline-offset: 3px;
 }
 
@@ -287,7 +247,7 @@ body.privacy-page {
     gap: 16px; 
     border-radius: 18px 18px 18px 18px; 
     background: var(--brand-blue); 
-    color: #fff; 
+    color: #fffdef; 
     font-size: .9rem; 
 }
 
@@ -311,7 +271,7 @@ body.privacy-page {
 
 @media (max-width: 760px) {
 
-    body.privacy-page {
+    body {
         padding: 6px;
     }
 
@@ -320,13 +280,7 @@ body.privacy-page {
         min-height: calc(100vh - 12px);
     }
 
-    .privacy-page .hero {
-        padding: 14px 14px 0;
-        min-height: 200px;
-        border-radius: 15px;
-    }
-
-    .privacy-page .site-nav {
+    .site-nav {
         padding: 0 14px;
         min-height: 46px;
     }
@@ -341,6 +295,7 @@ body.privacy-page {
 
     .content-layout {
         display: block;
+        width: 100%;
         padding: 26px 18px;
     }
 
@@ -365,7 +320,7 @@ body.privacy-page {
     }
 
     .side-link.active {
-        border-color: var(--gold);
+        border-color: var(--brand-yellow);
     }
 
     .content-section {
@@ -380,7 +335,7 @@ body.privacy-page {
         font-size: 13px;
     }
 
-    .privacy-page .site-footer {
+    .site-footer {
         min-height: 56px;
         padding: 14px 20px;
         border-radius: 14px;
@@ -391,11 +346,11 @@ body.privacy-page {
 
 @media (max-width: 420px) {
 
-    .privacy-page .site-nav {
+    .site-nav {
         margin: 10px 5px;
     }
 
-    .privacy-page .brand-logo {
+    .brand-logo {
         width: 70px;
         height: 65px;
     }
@@ -409,13 +364,13 @@ body.privacy-page {
         padding-right: 14px;
     }
 
-    .privacy-page .site-footer {
+    .site-footer {
         padding: 14px 12px;
         flex-wrap: wrap;
         font-size: 12px;
     }
 
-    .privacy-page .footer-links {
+    .footer-links {
         gap: 12px;
     }
 }
